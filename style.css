@@ -1,0 +1,13 @@
+html,body{
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+h1{
+    color: wheat;
+}
+body{
+    background-image: linear-gradient(rgb(48, 48, 48),rgb(190, 190, 190)
+    );
+}
+
