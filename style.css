@@ -7,15 +7,17 @@ h1{
     color: wheat;
 }
 body{
-    background-image: linear-gradient(rgb(48, 48, 48),rgb(190, 190, 190)
-    );
+    background-image: linear-gradient(rgb(48, 48, 48),rgb(190, 190, 190));
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
 }
 ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: #858585;
+    background: transparent;
+    border: gray solid 1px;
+    border-radius: 0px 20px 0px 20px;
   }
   
   ul li {
@@ -33,3 +35,34 @@ ul {
   ul li a:hover {
     background-color: #111111;
   }
+#randomjokebutton{
+  width: 40%;
+  height: 60px;
+  margin: 20px auto;
+  background-color: wheat;
+  color: black;
+  font-size: 30px;
+  border: rgb(235, 201, 137) solid 7px;
+  border-radius: 10px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font: bold;
+} 
+#randomjokebutton:hover{
+  background-color: rgb(235, 201, 137);
+  cursor: pointer;
+}
+#randomjoke{
+  text-align: center;
+}
+.jokeText{
+  font-size: 25px;
+  color: white;
+  font-weight: bold;
+}
+#welcome{
+  color: white;
+  font-size: 20px;
+  text-align: center;
+  margin: 20px;
+  text-align: justify;
+}

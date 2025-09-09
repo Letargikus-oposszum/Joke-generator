@@ -8,19 +8,36 @@
 </head>
 <body>
     <h1>Random joke displayer</h1>
-
+    
     <ul>
-        <li><a href="#home">Köszöntő</a></li>
-        <li><a href="#home">Keresés Id alapján</a></li>
-        <li><a href="#home">Véletlenszerű vicc</a></li>
-        <li><a href="#home">Keresés Típus alapján</a></li>
+        <li><a href="#welcome">Köszöntő</a></li>
+        <li><a href="#searchbyid">Keresés Id alapján</a></li>
+        <li><a href="#randomjoke">Véletlenszerű vicc</a></li>
+        <li><a href="#searchbytype">Keresés Típus alapján</a></li>
     </ul>
-
-    <input type="text" id="joketype">
-    <input type="text" id="jokeid">
-
-    <button id="randomjoke">Generate a random joke</button>
-
+    
+    <div id="welcome" class="section">
+        <h3>Üdvözlöm a vicc generátorban!</h3>
+        A fenti navigációs menü segítségével választhat a különböző funkciók között. 
+        Kereshet vicceket ID alapján, generálhat véletlenszerű vicceket, vagy kereshet típus szerint.
+        <h4>Élvezze a vicceket!</h4>
+    </div>
+    <div id="searchbyid" class="section" style="display:none;">
+        <input type="text" id="jokeid" placeholder="Írjon be egy számot">
+        <p id="IDjokeText" class="jokeText"></p>
+    </div>
+    <div id="randomjoke" class="section" style="display:none;">
+        <button id="randomjokebutton" onclick="RandomJoke()">Generate a random joke</button>
+        <p id="randomjokeText" class="jokeText"></p>
+    </div>
+    <div id="searchbytype" class="section" style="display:none;">
+        <select id="joketype">
+            <option value="general" id="general">General</option>
+            <option value="general" id="programming">Programming</option>
+        </select>
+        <p id="typejoketext" class="jokeText"></p>
+    </div>
+    
     <script src="Fetch.js"></script>
 </body>
 </html>
