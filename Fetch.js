@@ -26,5 +26,11 @@ function SearchByID(){
     .catch(error => console.error('Error:', error));
 }
 function SearchByType(){
+    var typejokeText = document.getElementById("typejokeText");
+    var joketype = parseInt(document.getElementById("joketype").value);
 
+    fetch(`https://official-joke-api.appspot.com/jokes/${joketype}`)
+    .then(response => response.json())
+    .then(data => idjokeText.innerHTML = data.setup + " - " + data.punchline)
+    .catch(error => console.error('Error:', error));
 }
