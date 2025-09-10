@@ -25,12 +25,15 @@ function SearchByID(){
     .then(data => idjokeText.innerHTML = data.setup + " - " + data.punchline)
     .catch(error => console.error('Error:', error));
 }
-function SearchByType(){
-    var typejokeText = document.getElementById("typejokeText");
-    var joketype = parseInt(document.getElementById("joketype").value);
 
-    fetch(`https://official-joke-api.appspot.com/jokes/${joketype}`)
+function JokeByType(){
+    var joketypeText = document.getElementById("typejoketext");
+    var joketype = document.getElementById("joketype").value;
+    console.log(joketype)
+    fetch(`https://official-joke-api.appspot.com/jokes/${joketype}/random`)
     .then(response => response.json())
-    .then(data => idjokeText.innerHTML = data.setup + " - " + data.punchline)
+    .then(data => {
+        return joketypeText.innerHTML = `<p>${data[0].setup}  -  ${data[0].punchline}</p>`})
     .catch(error => console.error('Error:', error));
 }
+//document.getElementById("typejokebtn").addEventListener("click", JokeByType());
